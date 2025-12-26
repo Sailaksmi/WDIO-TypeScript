@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+
+    "lib": [
+      "ES2022",
+      "DOM"
+    ],
+
+    "types": [
+      "node",
+      "@wdio/globals/types",
+      "expect-webdriverio",
+      "@wdio/cucumber-framework"
+    ],
+
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "esModuleInterop": true
+  },
+
+  "include": [
+    "e2e/**/*.ts",
+    "wdio.conf.ts"
+  ]
+}
