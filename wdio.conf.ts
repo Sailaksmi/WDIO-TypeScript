@@ -1,3 +1,6 @@
+require('ts-node/register')
+
+// if you already have other imports, keep them AFTER ts-node/register
 export const config: WebdriverIO.Config = {
     //
     // ====================
@@ -130,7 +133,8 @@ export const config: WebdriverIO.Config = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./e2e/steps/**/*.ts'],
+        require: ['./e2e/steps/**/*.ts',
+                 './e2e/support/**/*.ts'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
